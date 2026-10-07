@@ -30,10 +30,10 @@ for i, (nombre, rgb) in enumerate(colores):
         
     )
 
-    ax.set_xlim(0, 1)
-    ax.set_yticks([])
-    ax.set_xticks([])
-    ax.invert_yaxis()
+ax.set_xlim(0, 1)
+ax.set_yticks([])
+ax.set_xticks([])
+ax.invert_yaxis()
 
-    plt.title("Asi son los colores?")
-    plt.show()
+plt.title("Asi son los colores?")
+plt.show()
