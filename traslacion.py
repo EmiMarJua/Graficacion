@@ -10,7 +10,7 @@ tri = np.array([[0,0], [1,0], [0.5,1], [0,0]])
 #plt.legend(); plt.axis('equal'); plt.grid(True)
 #plt.title("Traslación de un triángulo")
 #plt.show()
-
+#Escalamiento
 #sx, sy = 2, 0.5
 #tri_s = tri * [sx, sy]
 #plt.plot(tri[:,0], tri[:,1], 'o-', label="Original")
@@ -18,13 +18,22 @@ tri = np.array([[0,0], [1,0], [0.5,1], [0,0]])
 #plt.legend(); plt.axis('equal'); plt.grid(True)
 #plt.title("Escalamiento de un triángulo")
 #plt.show()
-
-theta = np.radians(210)
-rot_matrix = np.array([[np.cos(theta), -np.sin(theta)],
-[np.sin(theta), np.cos(theta)]])
-tri_r = tri @ rot_matrix.T
-plt.plot(tri[:,0], tri[:,1], 'o-', label="Original")
-plt.plot(tri_r[:,0], tri_r[:,1], 'or--', label="Rotado 210°")
+#Rotacion
+#theta = np.radians(210)
+#rot_matrix = np.array([[np.cos(theta), -np.sin(theta)],
+#[np.sin(theta), np.cos(theta)]])
+#tri_r = tri @ rot_matrix.T
+#plt.plot(tri[:,0], tri[:,1], 'o-', label="Original")
+#plt.plot(tri_r[:,0], tri_r[:,1], 'or--', label="Rotado 210°")
+#plt.legend(); plt.axis('equal'); plt.grid(True)
+#plt.title("Rotación de un triángulo")
+#plt.show()
+#Sesgo
+shx, shy = 0.5, 1
+shear_matrix = np.array([[1, shx], [shy, 1]])
+tri_sh = tri @ shear_matrix.T
+plt.plot(tri[:,0], tri[:,1], 'ob-', label="Original")
+plt.plot(tri_sh[:,0], tri_sh[:,1], 'oc--', label="Sesgado")
 plt.legend(); plt.axis('equal'); plt.grid(True)
-plt.title("Rotación de un triángulo")
+plt.title("Sesgado de un triángulo")
 plt.show()
