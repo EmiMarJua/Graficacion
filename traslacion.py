@@ -2,7 +2,9 @@ import matplotlib.pyplot as plt
 import numpy as np
 # Triángulo original
 tri = np.array([[0,0], [1,0], [0.5,1], [0,0]])
+
 # Traslación
+
 #tx, ty = 2, 1
 #tri_t = tri + [tx, ty]
 #plt.plot(tri[:,0], tri[:,1], 'g-', label="Original")
@@ -10,7 +12,9 @@ tri = np.array([[0,0], [1,0], [0.5,1], [0,0]])
 #plt.legend(); plt.axis('equal'); plt.grid(True)
 #plt.title("Traslación de un triángulo")
 #plt.show()
+
 #Escalamiento
+
 #sx, sy = 2, 0.5
 #tri_s = tri * [sx, sy]
 #plt.plot(tri[:,0], tri[:,1], 'o-', label="Original")
@@ -18,7 +22,9 @@ tri = np.array([[0,0], [1,0], [0.5,1], [0,0]])
 #plt.legend(); plt.axis('equal'); plt.grid(True)
 #plt.title("Escalamiento de un triángulo")
 #plt.show()
+
 #Rotacion
+
 #theta = np.radians(210)
 #rot_matrix = np.array([[np.cos(theta), -np.sin(theta)],
 #[np.sin(theta), np.cos(theta)]])
@@ -28,7 +34,9 @@ tri = np.array([[0,0], [1,0], [0.5,1], [0,0]])
 #plt.legend(); plt.axis('equal'); plt.grid(True)
 #plt.title("Rotación de un triángulo")
 #plt.show()
+
 #Sesgo
+
 shx, shy = 0.5, 1
 shear_matrix = np.array([[1, shx], [shy, 1]])
 tri_sh = tri @ shear_matrix.T
